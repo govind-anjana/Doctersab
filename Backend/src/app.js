@@ -7,6 +7,6 @@ const app=express();
 
 app.use(express.json());
 
-app.use("/otp",sendotpRoutes)
+app.use("auth",)
 
 export default app;
