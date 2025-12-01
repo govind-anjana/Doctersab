@@ -10,5 +10,5 @@ const PORT=process.env.PORT || 8080 ;
 connectDB();
 
 app.listen(PORT,()=>{
-    console.log(`npm Start : http://localhost:${PORT}`)
+    console.log(`Server Start : http://localhost:${PORT}`)
 })
