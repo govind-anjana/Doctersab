@@ -1,24 +1,23 @@
-// routes/AdminRoutes.js
+// src/routes/AdminRoutes.js
+// Import required modules
 import express from "express";
 import dotenv from "dotenv";
 import { AdminLogin, SignUpAdmin } from "../Controller/AdminController.js";
-// import { verifyAdmin } from "../middleware/Admin.js";
 
+ 
 dotenv.config();
+
+// Create a router
 const router = express.Router();
-//Admin Sign Up
-router.post("/signup",SignUpAdmin);
 
-router.post("/login",AdminLogin)
+// ---------------- ROUTES ---------------- //
 
-// Admin login
-// router.post("/login", AdminLogin);
+// Admin signup route
+// When admin sends a POST request to /signup, SignUpAdmin function runs
+router.post("/signup", SignUpAdmin);
 
-// Update admin by ID (Admin Only)
-// router.put("/update/:id", verifyAdmin, UpdateAdmin);
-
-// Verify admin token (Admin Only)
-// router.get("/check", verifyAdmin, Check);
-
+// Admin login route
+// When admin sends a POST request to /login, AdminLogin function runs
+router.post("/login", AdminLogin);
 
 export default router;
